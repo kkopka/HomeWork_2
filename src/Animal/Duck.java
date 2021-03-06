@@ -11,8 +11,9 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
 
     @Override
     public void swim() {
-        System.out.println("Утка плывет");
+        System.out.println("Плавает по поверхности");
     }
+
 
     @Override
     public String voice() {
@@ -21,7 +22,7 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
 
     @Override
     public void Run() {
-        System.out.println("Утка идет");
+        System.out.println("Ходит медленно");
     }
 
 

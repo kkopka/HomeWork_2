@@ -4,7 +4,7 @@ public class Sheep extends Herbivor implements Voice,Run {
 
     @Override
     public void Run() {
-        System.out.println("Овца передвигается");
+        System.out.println("Передвигается медленно");
     }
 
     @Override

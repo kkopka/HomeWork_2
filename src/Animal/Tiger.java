@@ -4,7 +4,7 @@ public class Tiger extends Carnivorous implements Run,Voice {
 
     @Override
     public void Run() {
-        System.out.println("Тигр бежит");
+        System.out.println("Бегает подпрыгивая");
     }
 
     @Override
