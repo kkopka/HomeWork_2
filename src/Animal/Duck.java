@@ -31,7 +31,7 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
     }
     @Override
     public String getName1() {
-        return "утке ";
+        return "утке";
     }
 
     @Override

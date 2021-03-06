@@ -39,7 +39,8 @@ public class Zoo {
             int s=random.nextInt(foods.length);
             System.out.println(i+1+"."+animals[i].getName());
             worker.getVoice((Voice)animals[i]);
-            System.out.println("Даем "+animals[i].getName1()+foods[s].getName());
+            System.out.println("Даем "+animals[i].getName1()+":"+foods[s].getName());
+            System.out.println("Стоимостью: "+foods[s].price());
             System.out.println(worker.feed(animals[i],foods[s])+animals[i].getName2()+"!");
         }
 

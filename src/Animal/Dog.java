@@ -10,7 +10,7 @@ public class Dog extends Carnivorous implements Voice,Run {
 
     @Override
     public String voice() {
-        return "Говорит: "+ "\"" + "Гав" + "\"";
+        return "Говорит:"+ "\"" + "Гав" + "\"";
     }
 
     @Override
@@ -19,7 +19,7 @@ public class Dog extends Carnivorous implements Voice,Run {
     }
     @Override
     public String getName1() {
-        return "собаке ";
+        return "собаке";
     }
 
     @Override

@@ -18,6 +18,6 @@ public class Fish extends Carnivorous implements Swim {
 
     @Override
     public String getName2() {
-        return "рыбы ";
+        return "рыбы";
     }
 }

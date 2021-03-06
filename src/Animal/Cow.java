@@ -23,7 +23,7 @@ public class Cow extends Herbivor implements Run,Voice {
 
     @Override
     public String getName1() {
-        return "корове ";
+        return "корове";
     }
 
     @Override

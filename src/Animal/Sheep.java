@@ -18,7 +18,7 @@ public class Sheep extends Herbivor implements Voice,Run {
     }
     @Override
     public String getName1() {
-        return "овце ";
+        return "овце";
     }
 
     @Override

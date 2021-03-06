@@ -18,7 +18,7 @@ public class Tiger extends Carnivorous implements Run,Voice {
     }
     @Override
     public String getName1() {
-        return "тигру ";
+        return "тигру";
     }
 
     @Override
