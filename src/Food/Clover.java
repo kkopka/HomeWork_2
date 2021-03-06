@@ -6,4 +6,9 @@ public class Clover extends Grass {
     public int price() {
         return 3;
     }
+
+    @Override
+    public String getName() {
+        return "\"Клевер\"";
+    }
 }

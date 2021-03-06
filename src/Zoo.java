@@ -13,9 +13,9 @@ import Food.Clover;
 import Food.Raigas;
 import Food.Pork;
 import Animal.Swim;
-
-import java.io.IOException;
-import java.util.ArrayList;
+import Animal.Voice;
+import java.util.Random;
+import Animal.Run;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -32,16 +32,34 @@ public class Zoo {
         Lupin lupin = new Lupin();
         Clover clover = new Clover();
         Worker worker = new Worker();
-        worker.getVoice(dog);
-        worker.feed(dog, beef);
-        worker.feed(dog, clover);
-        worker.feed(dog,chikenMeet);
-        worker.getVoice(tiger);
-        worker.feed(sheep, lupin);
-        worker.feed(sheep, beef);
-        Swim[] pool = new Swim[]{duck, fish};
-        for (Swim swim : pool) {
-            swim.swim();
+        Food[]foods=new Food[]{beef,pork,raigas,lupin,clover};
+        Animal[]animals=new Animal[]{cow,duck,dog,sheep,tiger};
+        Random random=new Random();
+        for (int i = 0; i <animals.length; i++) {
+            int s=random.nextInt(foods.length);
+            System.out.println(i+1+"."+animals[i].getName());
+            worker.getVoice((Voice)animals[i]);
+            System.out.println("Даем "+animals[i].getName1()+foods[s].getName());
+            System.out.println(worker.feed(animals[i],foods[s])+animals[i].getName2()+"!");
         }
+
+        System.out.println();
+        Run[]runs=new Run[]{cow,dog,duck,sheep,tiger};
+        for (int i = 0; i < runs.length; i++) {
+            System.out.print(i+1+".");
+            runs[i].Run();
+        }
+        System.out.println();
+        System.out.print("1.");
+        duck.fly();
+
+        System.out.println();
+        Swim[] pool = new Swim[]{duck, fish,};
+        for (int i = 0; i < pool.length; i++) {
+            System.out.print(i+1+".");
+            pool[i].swim();
+        }
+
+
     }
 }

@@ -6,4 +6,9 @@ public class Raigas extends Grass {
     public int price() {
         return 2;
     }
+
+    @Override
+    public String getName() {
+        return "\"Райгас\"";
+    }
 }

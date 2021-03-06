@@ -3,27 +3,20 @@ package Animal;
 import Food.Food;
 import Food.Grass;
 import Food.Meat;
-import Food.Beef;
-import Food.ChikenMeat;
-import Food.Pork;
+
 
 public abstract class Carnivorous extends Animal {
 
     @Override
-    public void eat(Food food) {
+    public String eat(Food food) {
+        String s=null;
         if (food instanceof Grass) {
-            System.out.println("Хищники траву не едят!");
+            s="Не съедобно для ";
         }
         if (food instanceof Meat) {
-            if (food instanceof ChikenMeat) {
-                System.out.print("Съел куринное мясо, ");
-            } else if (food instanceof Beef) {
-                System.out.print("Съел говядину, ");
-            } else if (food instanceof Pork) {
-                System.out.print("Съел свиннину, ");
-            }
-            System.out.println("стоимость еды составила: "+food.price()+" от.ед");
+            return s="Съедобно для ";
         }
+        return s;
     }
 
 

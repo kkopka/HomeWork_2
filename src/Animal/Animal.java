@@ -1,12 +1,12 @@
 package Animal;
-
 import Food.Food;
 
-import java.util.Random;
 
 public abstract class Animal {
 
-    public abstract void eat(Food food);
-
+    public abstract String eat(Food food);
+    public abstract String getName();
+    public abstract String getName1();
+    public abstract String getName2();
 }
 

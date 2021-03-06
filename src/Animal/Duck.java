@@ -1,6 +1,6 @@
 package Animal;
 
-import Food.Food;
+
 
 public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
 
@@ -16,13 +16,26 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
 
     @Override
     public String voice() {
-        return "Кря";
+        return "Говорит:"+ "\"" + "Кряя" + "\"";
     }
 
     @Override
     public void Run() {
-        System.out.println("Утка бежит");
+        System.out.println("Утка идет");
     }
 
 
+    @Override
+    public String getName() {
+        return "Утка";
+    }
+    @Override
+    public String getName1() {
+        return "утке ";
+    }
+
+    @Override
+    public String getName2() {
+        return "утки";
+    }
 }
