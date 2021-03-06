@@ -1,6 +1,7 @@
 package Animal;
 
 public class Tiger extends Carnivorous implements Run,Voice {
+
     @Override
     public void Run() {
         System.out.println("Тигр бежит");
@@ -10,4 +11,5 @@ public class Tiger extends Carnivorous implements Run,Voice {
     public String voice() {
         return "Аррр";
     }
+
 }

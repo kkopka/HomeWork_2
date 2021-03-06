@@ -18,23 +18,24 @@ import java.io.IOException;
 import java.util.ArrayList;
 
 public class Zoo {
-    public static void main(String[] args)  {
+    public static void main(String[] args) {
         Cow cow = new Cow();
         Fish fish = new Fish();
         Duck duck = new Duck();
         Dog dog = new Dog();
         Sheep sheep = new Sheep();
         Tiger tiger = new Tiger();
-        Food beef = new Beef();
-        Food chikenMeet = new ChikenMeat();
-        Food pork = new Pork();
-        Food raigas = new Raigas();
-        Food lupin = new Lupin();
-        Food clover = new Clover();
+        Beef beef = new Beef();
+        ChikenMeat chikenMeet = new ChikenMeat();
+        Pork pork = new Pork();
+        Raigas raigas = new Raigas();
+        Lupin lupin = new Lupin();
+        Clover clover = new Clover();
         Worker worker = new Worker();
         worker.getVoice(dog);
-        worker.feed(dog, chikenMeet);
+        worker.feed(dog, beef);
         worker.feed(dog, clover);
+        worker.feed(dog,chikenMeet);
         worker.getVoice(tiger);
         worker.feed(sheep, lupin);
         worker.feed(sheep, beef);
@@ -42,6 +43,5 @@ public class Zoo {
         for (Swim swim : pool) {
             swim.swim();
         }
-
     }
 }

@@ -13,14 +13,15 @@ public abstract class Herbivor extends Animal {
         }
         if (food instanceof Grass){
             if (food instanceof Lupin){
-                System.out.println("Съел люпин");
+                System.out.print("Съел люпин, ");
             }
             else if (food instanceof Clover){
-                System.out.println("Съел клевер");
+                System.out.print("Съел клевер, ");
             }
             else if (food instanceof Raigas){
-                System.out.println("Съел травы");
+                System.out.print("Съел травы, ");
             }
+            System.out.println("стоимость еды составила: "+food.price()+" от.ед");
         }
 
     }

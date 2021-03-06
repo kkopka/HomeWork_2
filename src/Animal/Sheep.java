@@ -11,4 +11,5 @@ public class Sheep extends Herbivor implements Voice,Run {
     public String voice() {
         return "мееее";
     }
+
 }

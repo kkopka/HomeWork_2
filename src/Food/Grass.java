@@ -1,5 +1,6 @@
 package Food;
 
-public class Grass extends Food {
+public abstract class Grass extends Food {
+
 
 }
