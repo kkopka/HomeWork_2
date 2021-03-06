@@ -32,7 +32,7 @@ public class Zoo {
         Lupin lupin = new Lupin();
         Clover clover = new Clover();
         Worker worker = new Worker();
-        Food[]foods=new Food[]{beef,pork,raigas,lupin,clover};
+        Food[]foods=new Food[]{beef,pork,raigas,lupin,clover,chikenMeet};
         Animal[]animals=new Animal[]{cow,duck,dog,sheep,tiger};
         Random random=new Random();
         for (int i = 0; i <animals.length; i++) {
