@@ -55,11 +55,13 @@ public class Zoo {
         for (int i = 0; i < swim.length; i++) {
             System.out.println(i + 1 + "." + animals[i].getName()+":");
             swim[i].swim();
+            swim[i].swimVsFlow();
         }
         System.out.println("IV.Проверим на что они способны в передвижении");
         for (int i = 0; i <run.length ; i++) {
             System.out.println(i + 1 + "." + voices[i].getName()+":");
-            run[i].Run();
+            run[i].run();
+            run[i].walkin();
         }
     }
 }

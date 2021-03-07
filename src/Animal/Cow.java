@@ -3,20 +3,7 @@ package Animal;
 public class Cow extends Herbivor implements Run,Voice {
 
     @Override
-    public void Run() {
-        System.out.println("Ходит вальяжно");
-    }
-
-    @Override
-    public String voice() {
-
-        return "Говорит:"+ "\"" + "Муууу" + "\"";
-    }
-
-
-    @Override
     public String getName() {
-
         return "Корова";
     }
 
@@ -28,5 +15,25 @@ public class Cow extends Herbivor implements Run,Voice {
     @Override
     public String getName2() {
         return "коровы";
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Бежит к водоему");
+    }
+
+    @Override
+    public void walkin() {
+        System.out.println("Ходит вальяжно");
+    }
+
+    @Override
+    public String talk() {
+        return "Говорит:"+ "\"" + "Муууу" + "\"";
+    }
+
+    @Override
+    public String shout() {
+        return "Кричит на:"+ "\"" + "Мух" + "\"";
     }
 }

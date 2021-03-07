@@ -3,16 +3,6 @@ package Animal;
 public class Tiger extends Carnivorous implements Run,Voice {
 
     @Override
-    public void Run() {
-        System.out.println("Бегает подпрыгивая");
-    }
-
-    @Override
-    public String voice() {
-        return "Говорит:"+ "\"" + "Аррр" + "\"";
-    }
-
-    @Override
     public String getName() {
         return "Тигр";
     }
@@ -24,5 +14,25 @@ public class Tiger extends Carnivorous implements Run,Voice {
     @Override
     public String getName2() {
         return "тигра";
+    }
+
+    @Override
+    public void run() {
+        System.out.println("Идет не спеша");
+    }
+
+    @Override
+    public void walkin() {
+        System.out.println("Бегает подпрыгивая");
+    }
+
+    @Override
+    public String talk() {
+       return  "Говорит:"+ "\"" + "Аррр" + "\"";
+    }
+
+    @Override
+    public String shout() {
+       return  "Кричит:"+ "\"" + "в на антилопу " + "\"";
     }
 }

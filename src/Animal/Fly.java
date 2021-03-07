@@ -1,5 +1,6 @@
 package Animal;
 
 public interface Fly {
-    public void fly();
+    public void flyLow();
+    public void flyGihjt();
 }

@@ -1,6 +1,6 @@
 package Animal;
 
 public interface Voice {
-    public String voice();
-
+    public String talk();
+    public String shout();
 }
