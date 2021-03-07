@@ -40,11 +40,12 @@ public class Zoo {
         Random random = new Random();
         System.out.println("I.Кормим наших животных");
         for (int i = 0; i < animals.length; i++) {
-            int s = random.nextInt(foods.length);
             System.out.println(i + 1 + "." + animals[i].getName());
-            System.out.println("Даем " + animals[i].getName1() + ":" + foods[s].getName());
-            System.out.println("Стоимостью: " + foods[s].price());
-            System.out.println(worker.feed(animals[i], foods[s]) + animals[i].getName2() + "!");
+            for (int j=0;j<foods.length;j++) {
+                System.out.println("Даем " + animals[i].getName1() + ":" + foods[j].getName());
+                System.out.println("Стоимостью: " + foods[j].price());
+                System.out.println(worker.feed(animals[i], foods[j]) + animals[i].getName2() + "!");
+            }
         }
         System.out.println("II.Слушаем как они говорят");
         for (int i = 0; i < voices.length; i++) {
