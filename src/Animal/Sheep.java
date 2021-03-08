@@ -1,5 +1,7 @@
 package Animal;
 
+import Enums.Enum;
+
 public class Sheep extends Herbivor implements Voice,Run {
 
     @Override
@@ -41,6 +43,6 @@ public class Sheep extends Herbivor implements Voice,Run {
     }
     @Override
     public int mySquare() {
-        return Enum.third.getSquare();
+        return Enum.THIRD.getSquare();
     }
 }

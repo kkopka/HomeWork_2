@@ -1,6 +1,7 @@
 package Animal;
 
 
+import Enums.Enum;
 
 public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
 
@@ -66,6 +67,6 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
     }
     @Override
     public int mySquare() {
-        return Enum.first.getSquare();
+        return Enum.FIRST.getSquare();
     }
 }

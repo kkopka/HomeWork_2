@@ -27,7 +27,6 @@ public class Aviary<T extends Animal> {
 
     private HashMap<String, T> aviary = new HashMap<>();
 
-
     public void addInAviary(T animal) {
         if (check(animal.mySquare(), getSquareAviary())) {
             aviary.put(animal.getNickname(), animal);

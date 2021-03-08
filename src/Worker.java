@@ -3,7 +3,6 @@ import Food.Food;
 import Animal.Voice;
 import Animal.WrongFoodException;
 
-
 public class Worker  {
 
     public void feed(Animal animal,Food food){
