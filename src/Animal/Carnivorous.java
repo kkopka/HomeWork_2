@@ -8,15 +8,14 @@ import Food.Meat;
 public abstract class Carnivorous extends Animal {
 
     @Override
-    public String eat(Food food) {
-        String s=null;
+    public void eat(Food food) throws WrongFoodException {
         if (food instanceof Grass) {
-            s="Не съедобно для ";
+            throw new WrongFoodException("Не съедобая еда");
         }
         if (food instanceof Meat) {
-            return s="Съедобно для ";
+            System.out.println("Съедобно");
         }
-        return s;
+
     }
 
 

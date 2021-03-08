@@ -22,9 +22,10 @@ public class Cow extends Herbivor implements Run,Voice {
     public String getNickname() {
         return "Милка";
     }
+
     @Override
-    public int[] mySize() {
-        return Enum.fourth.getSize();
+    public int mySquare() {
+        return Enum.fourth.getSquare();
     }
 
     @Override

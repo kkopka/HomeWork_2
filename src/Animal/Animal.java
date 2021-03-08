@@ -6,7 +6,7 @@ public abstract class Animal {
 
 
 
-    public abstract String eat(Food food);
+    public abstract void eat(Food food) throws WrongFoodException;
 
     public abstract String getName();
 
@@ -15,7 +15,7 @@ public abstract class Animal {
     public abstract String getName2();
 
     public abstract String getNickname();
-    public abstract int[] mySize();
+    public abstract int mySquare();
 
     @Override
     public boolean equals(Object object) {

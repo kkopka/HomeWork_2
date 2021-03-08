@@ -16,6 +16,8 @@ import Animal.Swim;
 import Animal.Voice;
 import java.util.Random;
 import Animal.Run;
+import Animal.Carnivorous;
+import Animal.Herbivor;
 
 public class Zoo {
     public static void main(String[] args) {
@@ -44,7 +46,7 @@ public class Zoo {
             for (int j=0;j<foods.length;j++) {
                 System.out.println("Даем " + animals[i].getName1() + ":" + foods[j].getName());
                 System.out.println("Стоимостью: " + foods[j].price());
-                System.out.println(worker.feed(animals[i], foods[j]) + animals[i].getName2() + "!");
+                worker.feed(animals[i], foods[j]);
             }
         }
         System.out.println("II.Слушаем как они говорят");
@@ -64,10 +66,16 @@ public class Zoo {
             run[i].run();
             run[i].walkin();
         }
-
-        Aviary<Animal>aviary=new Aviary<Animal>();
-        aviary.addInAviaryForHerbivor(sheep);
-        aviary.getFromAviaryForHerbivor(sheep.getNickname())
-
+        Aviary<Carnivorous>carnivorousAviary=new Aviary<Carnivorous>();
+        Aviary<Herbivor>herbivorAviary=new Aviary<Herbivor>();
+        carnivorousAviary.addInAviary(tiger);
+        carnivorousAviary.addInAviary(dog);
+        carnivorousAviary.addInAviary(fish);
+        herbivorAviary.addInAviary(cow);
+        herbivorAviary.addInAviary(duck);
+        herbivorAviary.addInAviary(sheep);
+        System.out.println(herbivorAviary.getFromAviary("Боня").hashCode());
+        System.out.println(herbivorAviary.getFromAviary("Боня").hashCode());
+        System.out.println(herbivorAviary.getFromAviary("Боня").equals(herbivorAviary.getFromAviary("Немо")));
     }
 }

@@ -16,8 +16,8 @@ public class Fish extends Carnivorous implements Swim {
     }
 
     @Override
-    public int[] mySize() {
-        return Enum.first.getSize();
+    public int mySquare() {
+        return Enum.first.getSquare();
     }
     @Override
     public String getName() {
@@ -32,4 +32,5 @@ public class Fish extends Carnivorous implements Swim {
     public String getName2() {
         return "рыбы";
     }
+
 }

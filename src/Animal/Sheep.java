@@ -40,7 +40,7 @@ public class Sheep extends Herbivor implements Voice,Run {
         return "Ругается:"+ "\"" + "На куриц" + "\"";
     }
     @Override
-    public int[] mySize() {
-        return Enum.third.getSize();
+    public int mySquare() {
+        return Enum.third.getSquare();
     }
 }

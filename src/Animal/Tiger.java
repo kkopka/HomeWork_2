@@ -39,7 +39,7 @@ public class Tiger extends Carnivorous implements Run,Voice {
        return  "Кричит:"+ "\"" + "в на антилопу " + "\"";
     }
     @Override
-    public int[] mySize() {
-        return Enum.third.getSize();
+    public int mySquare() {
+        return Enum.third.getSquare();
     }
 }

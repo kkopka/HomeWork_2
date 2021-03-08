@@ -39,8 +39,9 @@ public class Dog extends Carnivorous implements Voice,Run {
     public String shout() {
         return "Кричит:"+ "\"" + "на кошку" + "\"";
     }
+
     @Override
-    public int[] mySize() {
-        return Enum.second.getSize();
+    public int mySquare() {
+        return Enum.second.getSquare();
     }
 }

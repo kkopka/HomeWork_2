@@ -65,7 +65,7 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
         System.out.println("Плывет против течения");
     }
     @Override
-    public int[] mySize() {
-        return Enum.second.getSize();
+    public int mySquare() {
+        return Enum.first.getSquare();
     }
 }
