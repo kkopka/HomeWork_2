@@ -2,6 +2,10 @@ package Animal;
 
 public class Fish extends Carnivorous implements Swim {
     @Override
+    public String getNickname() {
+        return "Немо";
+    }
+    @Override
     public void swim() {
         System.out.println("Плавает под водой, по течению");
     }
@@ -11,7 +15,10 @@ public class Fish extends Carnivorous implements Swim {
         System.out.println("Пытается пыть против течения");
     }
 
-
+    @Override
+    public int[] mySize() {
+        return Enum.first.getSize();
+    }
     @Override
     public String getName() {
         return "Рыба";

@@ -1,8 +1,10 @@
 package Animal;
 
 public class Dog extends Carnivorous implements Voice,Run {
-
-
+    @Override
+    public String getNickname() {
+        return "Барсик";
+    }
 
     @Override
     public String getName() {
@@ -36,5 +38,9 @@ public class Dog extends Carnivorous implements Voice,Run {
     @Override
     public String shout() {
         return "Кричит:"+ "\"" + "на кошку" + "\"";
+    }
+    @Override
+    public int[] mySize() {
+        return Enum.second.getSize();
     }
 }

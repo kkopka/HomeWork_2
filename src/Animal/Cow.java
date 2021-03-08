@@ -1,5 +1,6 @@
 package Animal;
 
+
 public class Cow extends Herbivor implements Run,Voice {
 
     @Override
@@ -15,6 +16,15 @@ public class Cow extends Herbivor implements Run,Voice {
     @Override
     public String getName2() {
         return "коровы";
+    }
+
+    @Override
+    public String getNickname() {
+        return "Милка";
+    }
+    @Override
+    public int[] mySize() {
+        return Enum.fourth.getSize();
     }
 
     @Override

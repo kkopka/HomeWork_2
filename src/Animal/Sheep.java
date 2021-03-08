@@ -2,7 +2,10 @@ package Animal;
 
 public class Sheep extends Herbivor implements Voice,Run {
 
-
+    @Override
+    public String getNickname() {
+        return "Боня";
+    }
     @Override
     public String getName() {
         return "Овца";
@@ -35,5 +38,9 @@ public class Sheep extends Herbivor implements Voice,Run {
     @Override
     public String shout() {
         return "Ругается:"+ "\"" + "На куриц" + "\"";
+    }
+    @Override
+    public int[] mySize() {
+        return Enum.third.getSize();
     }
 }

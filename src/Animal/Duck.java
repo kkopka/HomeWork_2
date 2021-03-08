@@ -4,7 +4,10 @@ package Animal;
 
 public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
 
-
+    @Override
+    public String getNickname() {
+        return "Васян";
+    }
 
     @Override
     public void flyLow() {
@@ -60,5 +63,9 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
     @Override
     public void swimVsFlow() {
         System.out.println("Плывет против течения");
+    }
+    @Override
+    public int[] mySize() {
+        return Enum.second.getSize();
     }
 }

@@ -64,5 +64,10 @@ public class Zoo {
             run[i].run();
             run[i].walkin();
         }
+
+        Aviary<Animal>aviary=new Aviary<Animal>();
+        aviary.addInAviaryForHerbivor(sheep);
+        aviary.getFromAviaryForHerbivor(sheep.getNickname())
+
     }
 }
