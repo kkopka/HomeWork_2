@@ -8,7 +8,7 @@ public class Worker  {
 
     public void feed(Animal animal,Food food){
         try {
-            animal.eat(food);
+            animal.eat(food,animal);
         } catch (WrongFoodException e) {
             e.printStackTrace();
         }

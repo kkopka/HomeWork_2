@@ -12,7 +12,6 @@ public class Aviary<T extends Animal> {
     public Aviary() {
         a = 5;
         b = 5;
-
     }
 
     public static int getSquareAviary() {

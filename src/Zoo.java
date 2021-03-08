@@ -39,7 +39,6 @@ public class Zoo {
         Animal[] voices = new Animal[]{cow, duck, dog, sheep, tiger};
         Swim[] swim = new Swim[]{duck, fish};
         Run[] run = new Run[]{cow, duck, dog, sheep, tiger};
-        Random random = new Random();
         System.out.println("I.Кормим наших животных");
         for (int i = 0; i < animals.length; i++) {
             System.out.println(i + 1 + "." + animals[i].getName());
@@ -66,6 +65,7 @@ public class Zoo {
             run[i].run();
             run[i].walkin();
         }
+        System.out.println();
         Aviary<Carnivorous>carnivorousAviary=new Aviary<Carnivorous>();
         Aviary<Herbivor>herbivorAviary=new Aviary<Herbivor>();
         carnivorousAviary.addInAviary(tiger);

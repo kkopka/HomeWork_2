@@ -6,7 +6,7 @@ public abstract class Animal {
 
 
 
-    public abstract void eat(Food food) throws WrongFoodException;
+    public abstract void eat(Food food,Animal animal) throws WrongFoodException;
 
     public abstract String getName();
 
