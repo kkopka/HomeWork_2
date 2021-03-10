@@ -1,8 +1,12 @@
 package Animal;
 
-import Enums.Enum;
-
 public class Fish extends Carnivorous implements Swim {
+    private int length, width;
+    public Fish() {
+        length=3;
+        width=3;
+    }
+
     @Override
     public String getNickname() {
         return "Немо";
@@ -18,8 +22,8 @@ public class Fish extends Carnivorous implements Swim {
     }
 
     @Override
-    public int mySquare() {
-        return Enum.FIRST.getSquare();
+    public int getSquare() {
+        return width*length;
     }
     @Override
     public String getName() {

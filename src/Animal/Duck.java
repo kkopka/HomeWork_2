@@ -1,9 +1,13 @@
 package Animal;
 
 
-import Enums.Enum;
-
 public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
+    private int length, width;
+
+    public Duck() {
+        length=3;
+        width=3;
+    }
 
     @Override
     public String getNickname() {
@@ -66,7 +70,7 @@ public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
         System.out.println("Плывет против течения");
     }
     @Override
-    public int mySquare() {
-        return Enum.FIRST.getSquare();
+    public int getSquare() {
+        return width*length;
     }
 }

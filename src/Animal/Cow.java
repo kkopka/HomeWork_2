@@ -1,9 +1,13 @@
 package Animal;
 
 
-import Enums.Enum;
+public class Cow extends Herbivor implements Run, Voice {
+    private int length, width;
 
-public class Cow extends Herbivor implements Run,Voice {
+    public Cow() {
+        length = 9;
+        width = 9;
+    }
 
     @Override
     public String getName() {
@@ -26,8 +30,8 @@ public class Cow extends Herbivor implements Run,Voice {
     }
 
     @Override
-    public int mySquare() {
-        return Enum.FOURTH.getSquare();
+    public int getSquare() {
+        return length * width;
     }
 
     @Override
@@ -42,11 +46,11 @@ public class Cow extends Herbivor implements Run,Voice {
 
     @Override
     public String talk() {
-        return "Говорит:"+ "\"" + "Муууу" + "\"";
+        return "Говорит:" + "\"" + "Муууу" + "\"";
     }
 
     @Override
     public String shout() {
-        return "Кричит на:"+ "\"" + "Мух" + "\"";
+        return "Кричит на:" + "\"" + "Мух" + "\"";
     }
 }

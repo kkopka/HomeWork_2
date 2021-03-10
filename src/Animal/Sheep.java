@@ -1,8 +1,11 @@
 package Animal;
 
-import Enums.Enum;
-
 public class Sheep extends Herbivor implements Voice,Run {
+    private int length, width;
+    public Sheep() {
+        length=4;
+        width=4;
+    }
 
     @Override
     public String getNickname() {
@@ -42,7 +45,7 @@ public class Sheep extends Herbivor implements Voice,Run {
         return "Ругается:"+ "\"" + "На куриц" + "\"";
     }
     @Override
-    public int mySquare() {
-        return Enum.THIRD.getSquare();
+    public int getSquare() {
+        return width*length;
     }
 }

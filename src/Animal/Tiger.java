@@ -1,8 +1,13 @@
 package Animal;
 
-import Enums.Enum;
-
 public class Tiger extends Carnivorous implements Run,Voice {
+    private int length, width;
+
+    public Tiger() {
+        length=5;
+        width=5;
+    }
+
     @Override
     public String getNickname() {
         return "Купер";
@@ -41,7 +46,7 @@ public class Tiger extends Carnivorous implements Run,Voice {
        return  "Кричит:"+ "\"" + "в на антилопу " + "\"";
     }
     @Override
-    public int mySquare() {
-        return Enum.THIRD.getSquare();
+    public int getSquare() {
+       return width*length;
     }
 }

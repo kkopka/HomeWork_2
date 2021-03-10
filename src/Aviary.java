@@ -1,46 +1,60 @@
 import Animal.Animal;
+import Enums.Aviarytype;
 import java.util.HashMap;
 
 
 
 public class Aviary<T extends Animal> {
-
-    private static int a;
-    private static int b;
-
-
-    public Aviary() {
-        a = 5;
-        b = 5;
+    private Aviarytype aviarySquare;
+    private int squareAllAnimalInAviary = 0;
+    public Aviary(Aviarytype aviarySquare) {
+        this.aviarySquare = aviarySquare;
     }
 
-    public static int getSquareAviary() {
-        return a*b;
-    }
+    public HashMap<String, T> aviary = new HashMap<>();
 
-    public static boolean check(int squareAnimal,int squareAviary) {
-        if (squareAnimal>squareAviary){
-         return false;
-        }
-        else return true;
-    }
-
-    private HashMap<String, T> aviary = new HashMap<>();
+    private String chek = null;
 
     public void addInAviary(T animal) {
-        if (check(animal.mySquare(), getSquareAviary())) {
-            aviary.put(animal.getNickname(), animal);
-        }
-        else System.out.println(animal.getNickname()+ " в вальер не помещается");
+
+        if (aviarySquare.getSquare() > squareAllAnimalInAviary + animal.getSquare()) {
+
+            if (aviary.isEmpty()) {
+                aviary.put(animal.getNickname(), animal);
+                chek = aviary.get(animal.getNickname()).getClass().getSuperclass().getSimpleName();
+            }
+            if (!aviary.isEmpty()) {
+                if (chek.equals(animal.getClass().getSuperclass().getSimpleName())) {
+                    aviary.put(animal.getNickname(), animal);
+                    squareAllAnimalInAviary += animal.getSquare();
+                } else {
+                    if (chek.equals("Herbivor")) {
+                        System.out.println("Это вольер для травоядных");
+                    } else System.out.println("Это вольер для хищников");
+                }
+
+            }
+
+        } else System.out.println("В вальере больше нет места, доступано: "+remainder()+" кв.м");
+
     }
-    public void DeletFromAviary(T animal) {
-              aviary.remove(animal.getNickname(),animal);
-        }
 
-
+    public void deletFromAviary(T animal) {
+        aviary.remove(animal.getNickname(), animal);
+        squareAllAnimalInAviary -= animal.getSquare();
+    }
 
     public Animal getFromAviary(String nickName) {
-      return aviary.get(nickName);
+        return aviary.get(nickName);
     }
+
+    public int remainder(){
+        return aviarySquare.getSquare()-squareAllAnimalInAviary;
+    }
+
+    public void quantityAnimalInAviary(){
+        System.out.println("Количество животных в вольере: "+aviary.size());
+    }
+
 
 }

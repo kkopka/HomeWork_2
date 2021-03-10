@@ -5,6 +5,7 @@ import Animal.Dog;
 import Animal.Duck;
 import Animal.Sheep;
 import Animal.Tiger;
+import Enums.Aviarytype;
 import Food.Food;
 import Food.Beef;
 import Food.Lupin;
@@ -14,10 +15,9 @@ import Food.Raigas;
 import Food.Pork;
 import Animal.Swim;
 import Animal.Voice;
-import java.util.Random;
+
 import Animal.Run;
-import Animal.Carnivorous;
-import Animal.Herbivor;
+
 
 public class Zoo {
     public static void main(String[] args) {
@@ -66,16 +66,20 @@ public class Zoo {
             run[i].walkin();
         }
         System.out.println();
-        Aviary<Carnivorous>carnivorousAviary=new Aviary<Carnivorous>();
-        Aviary<Herbivor>herbivorAviary=new Aviary<Herbivor>();
-        carnivorousAviary.addInAviary(tiger);
-        carnivorousAviary.addInAviary(dog);
-        carnivorousAviary.addInAviary(fish);
-        herbivorAviary.addInAviary(cow);
-        herbivorAviary.addInAviary(duck);
-        herbivorAviary.addInAviary(sheep);
-        System.out.println(herbivorAviary.getFromAviary("Боня").hashCode());
-        System.out.println(herbivorAviary.getFromAviary("Боня").hashCode());
-        System.out.println(herbivorAviary.getFromAviary("Боня").equals(herbivorAviary.getFromAviary("Немо")));
+
+        Aviary<Animal> aviary=new Aviary(Aviarytype.FIRST);
+        aviary.addInAviary(cow);
+        aviary.addInAviary(dog);
+        aviary.addInAviary(sheep);
+        aviary.addInAviary(duck);
+        aviary.quantityAnimalInAviary();
+        System.out.println("Достал из вольера: "+aviary.getFromAviary("Милка").getNickname());
+        System.out.println(aviary.getFromAviary("Боня").hashCode());
+        System.out.println(aviary.getFromAviary("Боня").hashCode());
+        System.out.println(aviary.getFromAviary("Боня").equals(aviary.getFromAviary("Милка")));
+        aviary.deletFromAviary(cow);
+        System.out.println("В вольере свободно: "+aviary.remainder());
+        aviary.quantityAnimalInAviary();
+
     }
 }
