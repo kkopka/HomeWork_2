@@ -11,7 +11,7 @@ public class Aviary<T extends Animal> {
         this.aviarySquare = aviarySquare;
     }
 
-    public HashMap<String, T> aviary = new HashMap<>();
+    private HashMap<String, T> aviary = new HashMap<>();
 
     private String chek = null;
 
