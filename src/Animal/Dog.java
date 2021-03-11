@@ -2,20 +2,12 @@ package Animal;
 
 public class Dog extends Carnivorous implements Voice,Run {
     private int length, width;
-    public Dog() {
+    public Dog(String name) {
+        super(name);
         length=4;
         width=4;
     }
 
-    @Override
-    public String getNickname() {
-        return "Барсик";
-    }
-
-    @Override
-    public String getName() {
-        return "Собака";
-    }
     @Override
     public String getName1() {
         return "собаке";

@@ -21,12 +21,12 @@ import Animal.Run;
 
 public class Zoo {
     public static void main(String[] args) {
-        Cow cow = new Cow();
-        Fish fish = new Fish();
-        Duck duck = new Duck();
-        Dog dog = new Dog();
-        Sheep sheep = new Sheep();
-        Tiger tiger = new Tiger();
+        Cow cow = new Cow("Милка");
+        Fish fish = new Fish("Немо");
+        Duck duck = new Duck("Васян");
+        Dog dog = new Dog("Купер");
+        Sheep sheep = new Sheep("Боня");
+        Tiger tiger = new Tiger("Кеша");
         Beef beef = new Beef();
         ChikenMeat chikenMeet = new ChikenMeat();
         Pork pork = new Pork();
@@ -73,10 +73,10 @@ public class Zoo {
         aviary.addInAviary(sheep);
         aviary.addInAviary(duck);
         aviary.quantityAnimalInAviary();
-        System.out.println("Достал из вольера: "+aviary.getFromAviary("Милка").getNickname());
-        System.out.println(aviary.getFromAviary("Боня").hashCode());
-        System.out.println(aviary.getFromAviary("Боня").hashCode());
-        System.out.println(aviary.getFromAviary("Боня").equals(aviary.getFromAviary("Милка")));
+        System.out.println("Достал из вольера: "+aviary.getFromAviary("Милка").getName());
+        System.out.println(aviary.getFromAviary("Милка").hashCode());
+        System.out.println(aviary.getFromAviary("Милка").hashCode());
+        System.out.println(aviary.getFromAviary("Милка").equals(aviary.getFromAviary("Боня")));
         aviary.deletFromAviary(cow);
         System.out.println("В вольере свободно: "+aviary.remainder());
         aviary.quantityAnimalInAviary();

@@ -2,18 +2,13 @@ package Animal;
 
 
 public class Cow extends Herbivor implements Run, Voice {
-    private int length, width;
 
-    public Cow() {
+    private int length, width;
+    public Cow(String name) {
+        super(name);
         length = 9;
         width = 9;
     }
-
-    @Override
-    public String getName() {
-        return "Корова";
-    }
-
     @Override
     public String getName1() {
         return "корове";
@@ -24,10 +19,6 @@ public class Cow extends Herbivor implements Run, Voice {
         return "коровы";
     }
 
-    @Override
-    public String getNickname() {
-        return "Милка";
-    }
 
     @Override
     public int getSquare() {

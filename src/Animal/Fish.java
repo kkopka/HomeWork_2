@@ -2,15 +2,12 @@ package Animal;
 
 public class Fish extends Carnivorous implements Swim {
     private int length, width;
-    public Fish() {
+    public Fish(String name) {
+        super(name);
         length=3;
         width=3;
     }
 
-    @Override
-    public String getNickname() {
-        return "Немо";
-    }
     @Override
     public void swim() {
         System.out.println("Плавает под водой, по течению");

@@ -7,6 +7,10 @@ import Food.Meat;
 
 public abstract class Carnivorous extends Animal {
 
+    public Carnivorous(String name) {
+        super(name);
+    }
+
     @Override
     public void eat(Food food,Animal animal) throws WrongFoodException {
         if (food instanceof Grass) {
@@ -17,5 +21,6 @@ public abstract class Carnivorous extends Animal {
         }
 
     }
+
 
 }

@@ -3,15 +3,12 @@ package Animal;
 public class Tiger extends Carnivorous implements Run,Voice {
     private int length, width;
 
-    public Tiger() {
+    public Tiger(String name) {
+        super(name);
         length=5;
         width=5;
     }
 
-    @Override
-    public String getNickname() {
-        return "Купер";
-    }
     @Override
     public String getName() {
         return "Тигр";

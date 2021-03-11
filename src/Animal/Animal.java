@@ -3,15 +3,18 @@ import Food.Food;
 
 
 public abstract class Animal {
+    private String name;
+    public Animal(String name) {
+        this.name=name;
+    }
 
     public abstract void eat(Food food, Animal animal) throws WrongFoodException;
 
-    public abstract String getName();
-
+    public String getName(){
+        return name;
+    }
     public abstract String getName1();
-
     public abstract String getName2();
-    public abstract String getNickname();
     public abstract int getSquare();
 
     @Override
@@ -20,7 +23,7 @@ public abstract class Animal {
         if (object == null) {
             return false;
         }
-        if (animal.getNickname() == this.getNickname()) {
+        if (animal.getName() == this.getName()) {
             return true;
         } else return false;
     }
@@ -29,7 +32,7 @@ public abstract class Animal {
     public int hashCode() {
         final int tmp = 30;
         int sum = 1;
-        sum = tmp + sum + getNickname().hashCode();
+        sum = tmp + sum + getName().hashCode();
         return sum;
     }
 

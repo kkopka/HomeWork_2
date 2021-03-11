@@ -6,6 +6,10 @@ import Food.Grass;
 
 
 public abstract class Herbivor extends Animal {
+    public Herbivor(String name) {
+        super(name);
+    }
+
     @Override
     public void eat(Food food,Animal animal) throws WrongFoodException {
 

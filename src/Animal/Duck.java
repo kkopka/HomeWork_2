@@ -4,15 +4,12 @@ package Animal;
 public class Duck extends Herbivor implements Fly,Swim,Voice,Run{
     private int length, width;
 
-    public Duck() {
+    public Duck(String name) {
+        super(name);
         length=3;
         width=3;
     }
 
-    @Override
-    public String getNickname() {
-        return "Васян";
-    }
 
     @Override
     public void flyLow() {

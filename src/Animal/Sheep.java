@@ -2,15 +2,12 @@ package Animal;
 
 public class Sheep extends Herbivor implements Voice,Run {
     private int length, width;
-    public Sheep() {
+    public Sheep(String name) {
+        super(name);
         length=4;
         width=4;
     }
 
-    @Override
-    public String getNickname() {
-        return "Боня";
-    }
     @Override
     public String getName() {
         return "Овца";
