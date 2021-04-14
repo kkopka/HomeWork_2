@@ -64,7 +64,7 @@ public class Zoo {
             run[i].run();
             run[i].walkin();
         }
-       String s1="GIT";
+
 
     }
 }
