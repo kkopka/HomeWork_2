@@ -64,7 +64,6 @@ public class Zoo {
             run[i].run();
             run[i].walkin();
         }
-      String hello;
 
     }
 }
